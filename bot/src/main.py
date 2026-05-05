@@ -28,13 +28,6 @@ class MyBot(commands.Bot):
         print(f'Бот {self.user.name} запущен. (ID: {self.user.id})')
         print(f'Автор бота: {self.author_name}. (ID: {self.author_id}) \n')
 
-    async def on_message(self, message):
-        if message.author == self.user:
-            return
-
-        if message.content.startswith('!hello'):
-            await message.channel.send('Hello!')
-
 if __name__ == '__main__':
     load_dotenv()   # загружает переменные из .env
     token = os.getenv('BOT_TOKEN')

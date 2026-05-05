@@ -13,20 +13,20 @@ class SlashCommands(commands.Cog):
     # ---------- ПРЕФИКСНЫЕ КОМАНДЫ ----------
 
     # Префиксная команда hello
-    @commands.command()
-    async def hello(self, ctx):
+    @commands.command(name = 'hello')
+    async def hello_prefix(self, ctx):
         await ctx.send(f'Привет, {ctx.author.name}!')
 
     # ---------- СЛЭШ-КОМАНДЫ ----------
 
     # Слеш-команда /hello
     @app_commands.command(name = 'hello', description = 'Бот поздоровается')
-    async def hello(self, interaction: discord.Interaction):
+    async def hello_slash(self, interaction: discord.Interaction):
         await interaction.response.send_message(f'Привет, {interaction.user.name}!')
 
     # Слеш-команда /info
     @app_commands.command(name = 'info', description = 'Информация о боте')
-    async def info(self, interaction: discord.Interaction):
+    async def info_slash(self, interaction: discord.Interaction):
         embed = discord.Embed(title = 'Мой бот', description='Сделан на Python')
         embed.add_field(name = 'Автор', value = self.author_name)
         await interaction.response.send_message(embed = embed)
