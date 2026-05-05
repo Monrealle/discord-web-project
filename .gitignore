@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+*.manifest
+*.spec
+.venv
+venv/
+env/
+.env
+*.log
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# C#
+bin/
+obj/
+*.user
+*.suo
+*.cache
+packages/
+
+# Node
+node_modules/
+
+# Docker
+docker-compose.override.yml
+
+# System
+.DS_Store
+Thumbs.db
