@@ -20,8 +20,8 @@ class MyBot(commands.Bot):
             f.write("="*60 + "\n")
 
     async def setup_hook(self):
-        await self.load_extension('commands') # Загружаем расширение из файла commands.py
-        await self.tree.sync()                # Синхронизация команд с Discord
+        await self.load_extension('cogs.commands') # Загружаем расширение из файла commands.py
+        await self.tree.sync()                     # Синхронизация команд с Discord
         print(f'Синхронизировано {len(self.tree.get_commands())} слеш-команд')
 
     async def on_ready(self):
@@ -29,7 +29,7 @@ class MyBot(commands.Bot):
         print(f'Автор бота: {self.author_name}. (ID: {self.author_id}) \n')
 
 if __name__ == '__main__':
-    load_dotenv()   # загружает переменные из .env
+    load_dotenv(os.path.join(os.path.dirname(__file__), '..', '..', '.env'))   # загружает переменные из .env
     token = os.getenv('BOT_TOKEN')
 
     bot = MyBot()
