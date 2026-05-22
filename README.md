@@ -10,6 +10,7 @@
 - **Веб-интерфейс**: C#
 
 ## Структура проекта
+'''
 .
 ├── bot/                    # Бот
 │   ├── src/                # Основной код бота
@@ -20,6 +21,7 @@
 ├── .gitignore              # Игнорируемые файлы
 ├── CODEOWNERS              # Владельцы репозитория
 └── README.md               # Этот файл
+'''
 
 ## Лицензия
 [MIT LICENSE](https://github.com/Monrealle/discord-web-project/blob/main/LICENSE)
